@@ -9,8 +9,7 @@ public class App
     public static void main( String[] args )
 
     {
-        System.out.println( "Estas lineas las escribio lean y estas gonza" );
-
+        System.out.println("hola");
     }
 
 }
