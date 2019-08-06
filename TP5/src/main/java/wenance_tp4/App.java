@@ -22,6 +22,7 @@ public class App {
                     correcto = true;
                     solucion[i] = letra;
                     aciertos++;
+
                 }
             }
             System.out.println(Arrays.toString(solucion));
@@ -145,6 +146,7 @@ public class App {
         Scanner teclado = new Scanner(System.in);
         System.out.println("Ingrese una letra");
         char c = teclado.next().charAt(0);
+
         return c;
 
     }
