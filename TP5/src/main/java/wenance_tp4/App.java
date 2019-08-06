@@ -7,8 +7,9 @@ package wenance_tp4;
 public class App 
 {
     public static void main( String[] args )
+
     {
-        System.out.println( "Hello World!" );
+        System.out.println( "Estas lineas las escribio lean" );
     }
-    
+
 }
