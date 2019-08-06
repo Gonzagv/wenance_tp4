@@ -2,7 +2,7 @@ package wenance_tp4;
 
 import java.util.Arrays;
 import java.util.Scanner;
-
+import java.util.ArrayList;
 public class App {
 
     public static void main(String[] args) {
@@ -15,6 +15,7 @@ public class App {
         char[] caracteres = arrA[x].toCharArray();
         char[] solucion = new char[arrA[x].length()];
         System.out.println(Arrays.toString(solucion));
+        ArrayList<String> validarletra = new ArrayList<String>();
         do {
             char letra = perdiLetra();
             for (int i = 0; i < arrA[x].length(); i++) {
