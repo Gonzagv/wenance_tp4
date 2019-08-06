@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="TP5-1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/target/TP5-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
