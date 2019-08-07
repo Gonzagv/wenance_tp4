@@ -12,8 +12,8 @@ public class App {
         boolean correcto = false;
         boolean gano = false;
         System.out.println("Bienvenido al Ahorcado Wenance");
-        String[] arrA = {"casa", "perro", "auto", "lampara", "zapato"};
-        int x = (int) (Math.random() * 5);
+        String[] arrA = {"casa", "perro", "auto", "lampara", "zapato" , "ropa", "caso" , "frasco", "ramo", "roma", "wenance", "salud", "silla", "aire", "maven"};
+        int x = (int) (Math.random() * 15);
         char[] caracteres = arrA[x].toCharArray();
         char[] solucion = new char[arrA[x].length()];
         imprimirPalabra(solucion);
