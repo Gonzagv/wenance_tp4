@@ -11,11 +11,13 @@ public class App {
         int errores = 0;
         boolean correcto = false;
         boolean gano = false;
+        System.out.println("Bienvenido al Ahorcado Wenance");
         String[] arrA = {"casa", "perro", "auto", "lampara", "zapato"};
         int x = (int) (Math.random() * 5);
         char[] caracteres = arrA[x].toCharArray();
         char[] solucion = new char[arrA[x].length()];
-        System.out.println(Arrays.toString(solucion));
+        imprimirPalabra(solucion);
+
         do {
             char letra = Character.toLowerCase(perdiLetra());
 
@@ -26,14 +28,8 @@ public class App {
                     solucion[i] = letra;
                 }
             }
-            System.out.println(Arrays.toString(solucion));
-            if (correcto) {
-                System.out.println("Letra correcta");
-                correcto = false;
-            } else {
-                System.out.println("Letra incorrecta");
-                errores++;
-            }
+
+
 
 
             switch (errores) {
@@ -128,8 +124,15 @@ public class App {
                     System.out.println("  ___                      ");
                     break;
             }
+            if (correcto) {
+                System.out.println("\nLetra correcta");
+                correcto = false;
+            } else {
+                System.out.println("\nLetra incorrecta");
+                errores++;
+            }
 
-
+            imprimirPalabra(solucion);
             for (int j = 0; j < caracteres.length; j++) {
                 if (solucion[j] == caracteres[j]) {
                     gano = true;
@@ -152,13 +155,27 @@ public class App {
 
     public static char perdiLetra() {
         Scanner teclado = new Scanner(System.in);
-        System.out.println("Ingrese una letra");
+        System.out.println("\nIngrese una letra");
         char c = teclado.next().charAt(0);
 
         return c;
 
     }
+
+
+    public static void imprimirPalabra(char solucion[]) {
+        System.out.println(" ");
+        for (int i = 0; i < solucion.length; i++) {
+
+            if (solucion[i] == '\u0000') {
+                System.out.print(" _ ");
+            } else {
+                System.out.print(" " + solucion[i] + " ");
+            }
+        }
+    }
 }
+
 
 
 
