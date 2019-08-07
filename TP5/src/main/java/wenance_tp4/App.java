@@ -29,7 +29,13 @@ public class App {
                 }
             }
 
-
+            if (correcto) {
+                System.out.println("\nLetra correcta");
+                correcto = false;
+            } else {
+                System.out.println("\nLetra incorrecta");
+                errores++;
+            }
 
 
             switch (errores) {
@@ -124,13 +130,6 @@ public class App {
                     System.out.println("  ___                      ");
                     break;
             }
-            if (correcto) {
-                System.out.println("\nLetra correcta");
-                correcto = false;
-            } else {
-                System.out.println("\nLetra incorrecta");
-                errores++;
-            }
 
             imprimirPalabra(solucion);
             for (int j = 0; j < caracteres.length; j++) {
@@ -145,9 +144,9 @@ public class App {
         } while (errores < 6 && !gano);
 
         if (gano) {
-            System.out.println("Felicitaciones");
+            System.out.println("\nFelicitaciones");
         } else {
-            System.out.println("Murio");
+            System.out.println("\nMurio");
         }
 
     }
